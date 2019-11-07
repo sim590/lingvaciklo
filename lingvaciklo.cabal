@@ -1,0 +1,29 @@
+cabal-version:       >=1.10
+name:                lingvaciklo
+version:             0.1.0.0
+synopsis:            Analyse des relations cycliques des mots d'une langue
+
+description:
+    Ce projet vise à calculer le nombre de cycles contenu dans les langues. À partir
+    d'un dictionnaire, on calcule un graphe des mots du dictionnaire où chaque arête
+    d'un mot `m` vers un mot `m'` signifie que la définition de `m` contient le mot
+    `m'`. Nous sommes intéressés par le nombre de cycles de ce grpahe.
+
+homepage:            https://github.com/sim590/lingvaciklo
+
+license:             GPL-3
+license-file:        LICENSE
+
+author:              Simon Désaulniers
+maintainer:          sim.desaulniers@gmail.com
+
+build-type:          Simple
+
+extra-source-files:  CHANGELOG.md, README.md
+
+executable lingvaciklo
+  main-is:             Main.hs
+  build-depends:       base >=4.12 && <4.13
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
